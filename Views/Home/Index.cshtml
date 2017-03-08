@@ -1,0 +1,188 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model IEnumerable<ZenithDataLib.Model.Event>
+
+<div class="jumbotron">
+    <h1>Zenith Society</h1>
+    <p class="lead">Zenith Society provides you a list of current week. If you click the event, you would see a list of event's activities</p>
+</div>
+
+<table class="table">
+    <tr>
+        <th style="width:40%">Start Time</th>
+        <th style="width:40%">End Time</th>
+        <th style="width:20%">Activities</th>
+    </tr>
+</table>
+
+<H3>Monday</H3>
+<table class="table">
+
+    @foreach (var item in ViewBag.Monday)
+    {
+        <tr>
+            <td style="width:40%">
+                @item.EventFromDateAndTime
+            </td>
+            <td style="width:40%">
+                @item.EventToDateAndTime
+            </td>
+            <td style="width:20%">
+                @foreach (var a in ViewBag.Monday_activities)
+                {
+                    if (item.EventId == a.EventId)
+                    {
+                        <p>@a.ActivityDescription</p>
+                    }
+                }
+            </td>
+
+        </tr>
+    }
+</table>
+<H3>Tuesday</H3>
+<table class="table">
+
+    @foreach (var item in ViewBag.Tuesday)
+    {
+        <tr>
+            <td style="width:40%">
+                @item.EventFromDateAndTime
+            </td>
+            <td style="width:40%">
+                @item.EventToDateAndTime
+            </td>
+            <td style="width:20%">
+                @foreach (var a in ViewBag.Tuesday_activities)
+                {
+                    if (item.EventId == a.EventId)
+                    {
+                        <p>@a.ActivityDescription</p>
+                    }
+                }
+            </td>
+        </tr>
+    }
+</table>
+<H3>Wendsday</H3>
+<table class="table">
+
+    @foreach (var item in ViewBag.Wendsday)
+    {
+        <tr>
+            <td style="width:40%">
+                @item.EventFromDateAndTime
+            </td>
+            <td style="width:40%">
+                @item.EventToDateAndTime
+            </td>
+            <td style="width:20%">
+                @foreach (var a in ViewBag.Wendsday_activities)
+                {
+                    if (item.EventId == a.EventId)
+                    {
+                        <p>@a.ActivityDescription</p>
+                    }
+                }
+            </td>
+        </tr>
+    }
+</table>
+<H3>Thursday</H3>
+<table class="table">
+
+    @foreach (var item in ViewBag.Thursday)
+    {
+        <tr>
+            <td style="width:40%">
+                @item.EventFromDateAndTime
+            </td>
+            <td style="width:40%">
+                @item.EventToDateAndTime
+            </td>
+            <td style="width:20%">
+                @foreach (var a in ViewBag.Thursday_activities)
+                {
+                    if (item.EventId == a.EventId)
+                    {
+                        <p>@a.ActivityDescription</p>
+                    }
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+<H3>Friday</H3>
+<table class="table">
+
+    @foreach (var item in ViewBag.Friday)
+    {
+        <tr>
+            <td style="width:40%">
+                @item.EventFromDateAndTime
+            </td>
+            <td style="width:40%">
+                @item.EventToDateAndTime
+            </td>
+            <td style="width:20%">
+                @foreach (var a in ViewBag.Friday_activities)
+                {
+                    if (item.EventId == a.EventId)
+                    {
+                        <p>@a.ActivityDescription</p>
+                    }
+                }
+            </td>
+        </tr>
+    }
+</table>
+<H3>Saturday</H3>
+<table class="table">
+
+    @foreach (var item in ViewBag.Saturday)
+    {
+        <tr>
+            <td style="width:40%">
+                @item.EventFromDateAndTime
+            </td>
+            <td style="width:40%">
+                @item.EventToDateAndTime
+            </td>
+            <td style="width:20%">
+                @foreach (var a in ViewBag.Saturday_activities)
+                {
+                    if (item.EventId == a.EventId)
+                    {
+                        <p>@a.ActivityDescription</p>
+                    }
+                }
+            </td>
+        </tr>
+    }
+</table>
+<H3>Sunday</H3>
+<table class="table">
+
+    @foreach (var item in ViewBag.Sunday)
+    {
+        <tr>
+            <td style="width:40%">
+                @item.EventFromDateAndTime
+            </td>
+            <td style="width:40%">
+                @item.EventToDateAndTime
+            </td>
+            <td style="width:20%">
+                @foreach (var a in ViewBag.Sunday_activities)
+                {
+                    if (item.EventId == a.EventId)
+                    {
+                        <p>@a.ActivityDescription</p>
+                    }
+                }
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,41 @@
+﻿@model ZenithDataLib.Model.Activity
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Activity Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Event.EnteredByUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Event.EnteredByUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActivityDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationData)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ActivityId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
